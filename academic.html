@@ -1,0 +1,1080 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UniGuard - Academic Profile</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+
+        header {
+            height: 75px;
+            background: #078bf5;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 40px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .back {
+            background: white;
+            color: #078bf5;
+
+            border: none;
+            border-radius: 20px;
+
+            padding: 10px 20px;
+
+            cursor: pointer;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+
+            margin: 40px auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #102a43;
+        }
+
+        .description {
+            text-align: center;
+            color: #627d98;
+            margin-bottom: 30px;
+        }
+
+        /* CARD */
+
+        .card {
+            background: white;
+            border-radius: 15px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* TABLE */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #078bf5;
+            color: white;
+
+            padding: 15px;
+
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        tr:hover {
+            background: #f8fbff;
+        }
+
+        /* SELECT */
+
+        select,
+        input {
+
+            width: 100%;
+
+            padding: 11px;
+
+            border: 1px solid #d9e2ec;
+
+            border-radius: 7px;
+
+            font-size: 14px;
+
+            outline: none;
+        }
+
+        select:focus,
+        input:focus {
+            border-color: #078bf5;
+        }
+
+        /* LEVEL */
+
+        .level {
+
+            text-align: center;
+
+            font-weight: bold;
+
+            padding: 8px 12px;
+
+            border-radius: 20px;
+
+            display: inline-block;
+
+            min-width: 45px;
+        }
+
+        .level-7 {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .level-6 {
+            background: #dff6ff;
+            color: #075985;
+        }
+
+        .level-5 {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .level-4 {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .level-3 {
+            background: #ffe5d0;
+            color: #9a3412;
+        }
+
+        .level-2 {
+            background: #fde2e2;
+            color: #991b1b;
+        }
+
+        .level-1 {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* BUTTON */
+
+        .button-area {
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+        .continue {
+
+            background: #078bf5;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 25px;
+
+            padding: 14px 35px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        .continue:hover {
+            background: #056fc4;
+        }
+
+        /* RESULT */
+
+        .result {
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #eef7ff;
+
+            border-left: 5px solid #078bf5;
+
+            border-radius: 8px;
+
+            display: none;
+        }
+
+        .result h3 {
+            color: #102a43;
+            margin-bottom: 10px;
+        }
+
+        .result p {
+            color: #486581;
+            margin: 5px 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 0 15px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .card {
+                padding: 10px;
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 650px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        🛡️ UniGuide
+    </div>
+
+    <button class="back" onclick="goBack()">
+        ← Back
+    </button>
+
+</header>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+    <h1 class="title">
+        Your Academic Profile
+    </h1>
+
+    <p class="description">
+
+        Select your six school subjects and enter your
+        percentage for each subject.
+
+        <br>
+
+        Life Orientation is automatically included as your
+        seventh subject.
+
+    </p>
+
+
+    <div class="card">
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        #
+                    </th>
+
+                    <th>
+                        Subject
+                    </th>
+
+                    <th>
+                        Percentage
+                    </th>
+
+                    <th>
+                        NSC Level
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <!-- SUBJECT 1 -->
+
+                <tr>
+
+                    <td>
+                        1
+                    </td>
+
+                    <td>
+
+                        <select class="subject">
+
+                            <option value="">
+                                Select subject
+                            </option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="number"
+                            class="percentage"
+                            min="0"
+                            max="100"
+                            placeholder="Enter %"
+                        >
+
+                    </td>
+
+                    <td>
+
+                        <span class="level">
+                            —
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- SUBJECT 2 -->
+
+                <tr>
+
+                    <td>
+                        2
+                    </td>
+
+                    <td>
+
+                        <select class="subject">
+
+                            <option value="">
+                                Select subject
+                            </option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="number"
+                            class="percentage"
+                            min="0"
+                            max="100"
+                            placeholder="Enter %"
+                        >
+
+                    </td>
+
+                    <td>
+
+                        <span class="level">
+                            —
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- SUBJECT 3 -->
+
+                <tr>
+
+                    <td>
+                        3
+                    </td>
+
+                    <td>
+
+                        <select class="subject">
+
+                            <option value="">
+                                Select subject
+                            </option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="number"
+                            class="percentage"
+                            min="0"
+                            max="100"
+                            placeholder="Enter %"
+                        >
+
+                    </td>
+
+                    <td>
+
+                        <span class="level">
+                            —
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- SUBJECT 4 -->
+
+                <tr>
+
+                    <td>
+                        4
+                    </td>
+
+                    <td>
+
+                        <select class="subject">
+
+                            <option value="">
+                                Select subject
+                            </option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="number"
+                            class="percentage"
+                            min="0"
+                            max="100"
+                            placeholder="Enter %"
+                        >
+
+                    </td>
+
+                    <td>
+
+                        <span class="level">
+                            —
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- SUBJECT 5 -->
+
+                <tr>
+
+                    <td>
+                        5
+                    </td>
+
+                    <td>
+
+                        <select class="subject">
+
+                            <option value="">
+                                Select subject
+                            </option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="number"
+                            class="percentage"
+                            min="0"
+                            max="100"
+                            placeholder="Enter %"
+                        >
+
+                    </td>
+
+                    <td>
+
+                        <span class="level">
+                            —
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- SUBJECT 6 -->
+
+                <tr>
+
+                    <td>
+                        6
+                    </td>
+
+                    <td>
+
+                        <select class="subject">
+
+                            <option value="">
+                                Select subject
+                            </option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="number"
+                            class="percentage"
+                            min="0"
+                            max="100"
+                            placeholder="Enter %"
+                        >
+
+                    </td>
+
+                    <td>
+
+                        <span class="level">
+                            —
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- LIFE ORIENTATION -->
+
+                <tr>
+
+                    <td>
+                        7
+                    </td>
+
+                    <td>
+
+                        <select class="subject" disabled>
+
+                            <option>
+                                Life Orientation
+                            </option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="number"
+                            class="percentage"
+                            id="lifeOrientation"
+                            min="0"
+                            max="100"
+                            placeholder="Enter %"
+                        >
+
+                    </td>
+
+                    <td>
+
+                        <span
+                            class="level"
+                            id="lifeLevel"
+                        >
+                            —
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+
+        <!-- BUTTON -->
+
+        <div class="button-area">
+
+            <button
+                class="continue"
+                onclick="checkSubjects()"
+            >
+                Continue →
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div
+            class="result"
+            id="result"
+        >
+
+            <h3>
+                Academic Profile Saved ✅
+            </h3>
+
+            <p id="resultText"></p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+/*
+    SOUTH AFRICAN SCHOOL SUBJECTS
+*/
+
+const subjects = [
+
+    "English Home Language",
+    "English First Additional Language",
+
+    "Afrikaans Home Language",
+    "Afrikaans First Additional Language",
+
+    "isiZulu Home Language",
+    "isiZulu First Additional Language",
+
+    "isiXhosa Home Language",
+    "isiXhosa First Additional Language",
+
+    "Sesotho Home Language",
+    "Sesotho First Additional Language",
+
+    "Setswana Home Language",
+    "Setswana First Additional Language",
+
+    "Sepedi Home Language",
+    "Sepedi First Additional Language",
+
+    "siSwati Home Language",
+    "siSwati First Additional Language",
+
+    "Tshivenda Home Language",
+    "Tshivenda First Additional Language",
+
+    "isiNdebele Home Language",
+    "isiNdebele First Additional Language",
+
+    "Mathematics",
+    "Mathematical Literacy",
+
+    "Physical Sciences",
+    "Life Sciences",
+    "Agricultural Sciences",
+    "Marine Sciences",
+
+    "Accounting",
+    "Business Studies",
+    "Economics",
+
+    "Geography",
+    "History",
+    "Religious Studies",
+
+    "Information Technology",
+    "Computer Applications Technology",
+
+    "Engineering Graphics and Design",
+
+    "Civil Technology",
+    "Electrical Technology",
+    "Mechanical Technology",
+
+    "Agricultural Management Practices",
+    "Agricultural Technology",
+
+    "Consumer Studies",
+    "Hospitality Studies",
+    "Tourism",
+
+    "Visual Arts",
+    "Dramatic Arts",
+    "Music",
+    "Dance Studies",
+    "Design"
+
+];
+
+
+/*
+    ADD SUBJECTS TO DROPDOWNS
+*/
+
+const dropdowns =
+    document.querySelectorAll(".subject");
+
+
+dropdowns.forEach(function(dropdown, index) {
+
+    if (index === 6) {
+        return;
+    }
+
+    subjects.forEach(function(subject) {
+
+        const option =
+            document.createElement("option");
+
+        option.value = subject;
+
+        option.textContent = subject;
+
+        dropdown.appendChild(option);
+
+    });
+
+});
+
+
+/*
+    CALCULATE NSC LEVEL
+*/
+
+function calculateLevel(percentage) {
+
+    if (percentage >= 80)
+        return 7;
+
+    if (percentage >= 70)
+        return 6;
+
+    if (percentage >= 60)
+        return 5;
+
+    if (percentage >= 50)
+        return 4;
+
+    if (percentage >= 40)
+        return 3;
+
+    if (percentage >= 30)
+        return 2;
+
+    return 1;
+
+}
+
+
+/*
+    UPDATE LEVEL DISPLAY
+*/
+
+const percentageInputs =
+    document.querySelectorAll(".percentage");
+
+
+percentageInputs.forEach(function(input) {
+
+    input.addEventListener("input", function() {
+
+        let value =
+            Number(input.value);
+
+        const row =
+            input.closest("tr");
+
+        const level =
+            row.querySelector(".level");
+
+
+        if (
+            input.value === "" ||
+            value < 0 ||
+            value > 100
+        ) {
+
+            level.textContent = "—";
+
+            level.className = "level";
+
+            return;
+
+        }
+
+
+        const nscLevel =
+            calculateLevel(value);
+
+
+        level.textContent =
+            nscLevel;
+
+
+        level.className =
+            "level level-" + nscLevel;
+
+    });
+
+});
+
+
+/*
+    PREVENT DUPLICATE SUBJECTS
+*/
+
+dropdowns.forEach(function(dropdown) {
+
+    dropdown.addEventListener("change", function() {
+
+        const selected = [];
+
+        dropdowns.forEach(function(item) {
+
+            if (item.value !== "") {
+                selected.push(item.value);
+            }
+
+        });
+
+
+        dropdowns.forEach(function(item) {
+
+            const currentValue =
+                item.value;
+
+
+            Array.from(item.options).forEach(
+                function(option) {
+
+                    if (
+                        option.value !== "" &&
+                        option.value !== currentValue
+                    ) {
+
+                        option.disabled =
+                            selected.includes(option.value);
+
+                    }
+
+                }
+            );
+
+        });
+
+    });
+
+});
+
+
+/*
+    CHECK THE FORM
+*/
+
+function checkSubjects() {
+
+    const selectedSubjects = [];
+
+    const marks = [];
+
+
+    /*
+        Get first six subjects
+    */
+
+    for (let i = 0; i < 6; i++) {
+
+        const subject =
+            dropdowns[i].value;
+
+        const mark =
+            percentageInputs[i].value;
+
+
+        if (subject === "") {
+
+            alert(
+                "Please select Subject " +
+                (i + 1)
+            );
+
+            return;
+
+        }
+
+
+        if (
+            mark === "" ||
+            Number(mark) < 0 ||
+            Number(mark) > 100
+        ) {
+
+            alert(
+                "Please enter a valid percentage for " +
+                subject
+            );
+
+            return;
+
+        }
+
+
+        selectedSubjects.push(subject);
+
+        marks.push(Number(mark));
+
+    }
+
+
+    /*
+        Life Orientation
+    */
+
+    const lifeMark =
+        document.getElementById(
+            "lifeOrientation"
+        ).value;
+
+
+    if (
+        lifeMark === "" ||
+        Number(lifeMark) < 0 ||
+        Number(lifeMark) > 100
+    ) {
+
+        alert(
+            "Please enter your Life Orientation percentage."
+        );
+
+        return;
+
+    }
+
+
+    selectedSubjects.push(
+        "Life Orientation"
+    );
+
+    marks.push(
+        Number(lifeMark)
+    );
+
+
+    /*
+        Calculate average
+    */
+
+    const total =
+        marks.reduce(
+            (sum, mark) => sum + mark,
+            0
+        );
+
+
+    const average =
+        total / marks.length;
+
+
+    /*
+        Display result
+    */
+
+    document.getElementById(
+        "result"
+    ).style.display = "block";
+
+
+    document.getElementById(
+        "resultText"
+    ).innerHTML =
+
+        "Your 7 subjects have been recorded.<br><br>" +
+
+        "<strong>Average:</strong> " +
+        average.toFixed(1) +
+        "%<br><br>" +
+
+        "UniGuide can now use your subjects, " +
+        "percentages and NSC levels to help " +
+        "find suitable UNIZULU programmes.";
+
+}
+
+
+/*
+    BACK BUTTON
+*/
+
+function goBack() {
+    window.location.href = "/";
+}
+
+</script>
+
+
+</body>
+
+</html>
+
