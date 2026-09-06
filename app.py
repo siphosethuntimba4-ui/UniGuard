@@ -1,17 +1,23 @@
+```python
 from flask import Flask, request, jsonify, send_file
 import ollama
+import os
 
+# Get the main UniGuard project folder
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Create Flask application
 app = Flask(__name__)
 
 
 @app.route("/")
 def home():
-    return send_file("body.html")
+    return send_file(os.path.join(BASE_DIR, "frontend", "body.html"))
 
 
 @app.route("/academic")
 def academic():
-    return send_file("academic.html")
+    return send_file(os.path.join(BASE_DIR, "frontend", "academic.html"))
 
 
 @app.route("/chat", methods=["POST"])
@@ -117,3 +123,4 @@ and encourage them to work towards their academic goals.
 
 if __name__ == "__main__":
     app.run(debug=False)
+    

@@ -1,0 +1,995 @@
+[
+  {
+    "name": "Faculty of Humanities and Social Sciences",
+    "description": "Programmes listed in the supplied UNIZULU data. Closing date in source: 31 October 2025.",
+    "departments": [
+      {
+        "name": "Humanities and Social Sciences",
+        "description": "Department grouping used because the supplied source does not provide individual department names.",
+        "qualifications": [
+          {
+            "name": "B A Environmental Planning & Development",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Geog 4 and four 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Geog 4 and four 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A in Intercultural Communication",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "Diploma in Media Studies",
+            "duration": 3,
+            "description": "NSC Dip with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 24,
+              "description": "NSC Dip with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A Correctional Studies",
+            "duration": 3,
+            "description": "NSC Deg with Engl 5 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 5 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A Industrial Sociology",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A (Anthropology & History)",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A (Geography & History)",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A (Geography & Tourism)",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A (History & IsiZulu)",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A (Linguistics & English)",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A (Philosophy & Psychology)",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "BA in Psychology",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Social Sci (Geography/History) 4 and four 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Social Sci (Geography/History) 4 and four 20 credit subjects"
+            }
+          },
+          {
+            "name": "BA in Drama, Theatre and Performance",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Dramatic Art or Visual Art 4 and four 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and Dramatic Art or Visual Art 4 and four 20 credit subjects"
+            }
+          },
+          {
+            "name": "Diploma in Public Relations Management",
+            "duration": 3,
+            "description": "NSC Dip with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 24,
+              "description": "NSC Dip with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A Development Studies",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A Information Science",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B Library & Information Science",
+            "duration": 4,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B Social Work",
+            "duration": 4,
+            "description": "NSC Deg with Engl HL 4/FAL 5 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl HL 4/FAL 5 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "B A Sociology",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and five 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and five 20 credit subjects"
+            }
+          },
+          {
+            "name": "Bachelor of Social Sciences in Political and International Studies",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Geog 4 and Hist 4 and Economics/Math Literacy 4 and two 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and Geog 4 and Hist 4 and Economics/Math Literacy 4 and two 20 credit subjects"
+            }
+          },
+          {
+            "name": "B Tourism Studies",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Tourism or Geog 4 and four 20 credit subjects",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 4 and Tourism or Geog 4 and four 20 credit subjects"
+            }
+          },
+          {
+            "name": "Diploma in Tourism Management",
+            "duration": 3,
+            "description": "NSC Dip with Engl 4 and any five subjects: Maths/Maths Lit, Tourism and/or Geog and/or Hosp Stud, Bus Stud and/or Acc at min level 4",
+            "admission_requirements": {
+              "minimum_aps": 24,
+              "description": "NSC Dip with Engl 4 and any five subjects: Maths/Maths Lit, Tourism and/or Geog and/or Hosp Stud, Bus Stud and/or Acc at min level 4"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Faculty of Education",
+    "description": "Education programmes listed in the supplied UNIZULU data.",
+    "departments": [
+      {
+        "name": "Education",
+        "description": "Department grouping used because the supplied source does not provide individual department names.",
+        "qualifications": [
+          {
+            "name": "Bachelor of Education in Foundation Phase Teaching",
+            "duration": 4,
+            "description": "NSC Deg with IsiZulu HL 4 and Engl FAL 4 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with IsiZulu HL 4 and Engl FAL 4 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "Bachelor of Education in Intermediate Phase Teaching: Languages and Humanities",
+            "duration": 4,
+            "description": "NSC Deg with IsiZulu 4 and Engl 4 and Geog and Hist 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with IsiZulu 4 and Engl 4 and Geog and Hist 4"
+            }
+          },
+          {
+            "name": "Bachelor of Education in Intermediate Phase Teaching: Languages, Maths, Natural Science & Technology",
+            "duration": 4,
+            "description": "NSC Deg with IsiZulu FAL/HL 4 and Engl HL/FAL 4 and Maths 4 and Phys Sci 3 or Maths 3 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with IsiZulu FAL/HL 4 and Engl HL/FAL 4 and Maths 4 and Phys Sci 3 or Maths 3 and Phys Sci 4"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Faculty of Commerce, Administration and Law",
+    "description": "Commerce, administration and law programmes listed in the supplied UNIZULU data.",
+    "departments": [
+      {
+        "name": "Commerce, Administration and Law",
+        "description": "Department grouping used because the supplied source does not provide individual department names.",
+        "qualifications": [
+          {
+            "name": "B Admin: Public Administration and Business Management",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Admin: Public Administration and Economics",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Admin: Public Administration and Human Resources",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Admin: Public Administration and Political Science",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Accounting and Economics)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6"
+            }
+          },
+          {
+            "name": "B Com (Accounting and Economics) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Accounting) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Banking and Business Management)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6"
+            }
+          },
+          {
+            "name": "B Com (Banking and Business Management) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Business Management and Accounting)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6"
+            }
+          },
+          {
+            "name": "B Com (Business Management and Accounting) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Business Management and Economics)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6"
+            }
+          },
+          {
+            "name": "B Com (Business Management and Economics) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Business Management and Human Resource Management) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Economics and Banking)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6"
+            }
+          },
+          {
+            "name": "B Com (Economics and Banking) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Economics and Human Resource Management)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6"
+            }
+          },
+          {
+            "name": "B Com (Economics and Human Resources Management) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com (Human Resource Management and Business Management)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths/Maths Lit 6"
+            }
+          },
+          {
+            "name": "B Com (Management Information Systems)",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl and Maths 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl and Maths 4"
+            }
+          },
+          {
+            "name": "B Com (Management Information Systems) 4 years",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "B Com Accounting Science",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl and Maths 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl and Maths 4"
+            }
+          },
+          {
+            "name": "B Com in Accounting",
+            "duration": 3,
+            "description": "NSC Deg Endorsement with Engl and Maths 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg Endorsement with Engl and Maths 4"
+            }
+          },
+          {
+            "name": "B Laws",
+            "duration": 4,
+            "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 30,
+              "description": "NSC Deg Endorsement with Engl 4 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "Dip Co-Operatives Management",
+            "duration": 3,
+            "description": "NSC Dip Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 24,
+              "description": "NSC Dip Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "Dip Logistics Management",
+            "duration": 3,
+            "description": "NSC Dip Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 24,
+              "description": "NSC Dip Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "Dip Transport Management",
+            "duration": 3,
+            "description": "NSC Dip Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 24,
+              "description": "NSC Dip Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          },
+          {
+            "name": "H Cert Accountancy",
+            "duration": 1,
+            "description": "NSC Certificate Endorsement with Engl 3 and Maths 3/Maths Lit 4",
+            "admission_requirements": {
+              "minimum_aps": 22,
+              "description": "NSC Certificate Endorsement with Engl 3 and Maths 3/Maths Lit 4"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Faculty of Science, Agriculture and Engineering",
+    "description": "Science, agriculture and engineering programmes listed in the supplied UNIZULU data.",
+    "departments": [
+      {
+        "name": "Science, Agriculture and Engineering",
+        "description": "Department grouping used because the supplied source does not provide individual department names.",
+        "qualifications": [
+          {
+            "name": "B Consumer Science: Extension & Rural Development",
+            "duration": 4,
+            "description": "NSC Deg with Engl and LO 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and LO 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Consumer Science: Hospitality & Tourism",
+            "duration": 3,
+            "description": "NSC Deg with Engl AND LO 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND LO 4"
+            }
+          },
+          {
+            "name": "B Eng Electrical Engineering",
+            "duration": 4,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5",
+            "admission_requirements": {
+              "minimum_aps": 30,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5"
+            }
+          },
+          {
+            "name": "B Eng Electrical Engineering and Computer Engineering",
+            "duration": 4,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5",
+            "admission_requirements": {
+              "minimum_aps": 30,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5"
+            }
+          },
+          {
+            "name": "B Eng Mechanical Engineering",
+            "duration": 4,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5",
+            "admission_requirements": {
+              "minimum_aps": 30,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5"
+            }
+          },
+          {
+            "name": "B Eng Mechatronic Engineering",
+            "duration": 4,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5",
+            "admission_requirements": {
+              "minimum_aps": 30,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 5"
+            }
+          },
+          {
+            "name": "B Nursing Science",
+            "duration": 4,
+            "description": "NSC Deg with Engl and Life Sci 4 and level 3 in Maths/level 4 maths literacy",
+            "admission_requirements": {
+              "minimum_aps": 30,
+              "description": "NSC Deg with Engl and Life Sci 4 and level 3 in Maths/level 4 maths literacy"
+            }
+          },
+          {
+            "name": "B Sc Agric: Agronomy",
+            "duration": 4,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Agric: Animal Science",
+            "duration": 4,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Agricultural Economics: Agribusiness Management",
+            "duration": 4,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Applied Mathematics with Computer Sciences as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Applied Mathematics with Hydrology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Applied Mathematics with Mathematics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Applied Mathematics with Physics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Applied Mathematics with Statistics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Augmented: Life Sciences",
+            "duration": 4,
+            "description": "NSC Deg with Engl 3 AND Maths AND Phys Sci 3 AND Life Sci OR Agric Sci 3",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 3 AND Maths AND Phys Sci 3 AND Life Sci OR Agric Sci 3"
+            }
+          },
+          {
+            "name": "B Sc Augmented: Physical Sciences",
+            "duration": 4,
+            "description": "NSC Deg with Engl 3 AND Maths AND Phys Sci 3",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 3 AND Maths AND Phys Sci 3"
+            }
+          },
+          {
+            "name": "B Sc Biochemistry with Botany as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Biochemistry with Chemistry as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl HL/FAL 4 and Maths 5 and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl HL/FAL 4 and Maths 5 and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Biochemistry with Human Movement Science as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Biochemistry with Microbiology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Biochemistry with Zoology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Botany with Geography as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths 4 and Phys Sci 3 and Geog 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths 4 and Phys Sci 3 and Geog 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Botany with Hydrology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Botany with Microbiology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Botany with Zoology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Chemistry with Computer Science as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Chemistry with Hydrology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Chemistry with Mathematics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Chemistry with Physics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Chemistry with Zoology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl HL/FAL 4 and Maths 5 and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl HL/FAL 4 and Maths 5 and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Computer Science with Hydrology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Computer Science with Mathematics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Computer Science with Physics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Computer Science with Statistics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Geography with Hydrology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths and Phys Sci and Geog 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths and Phys Sci and Geog 4"
+            }
+          },
+          {
+            "name": "B Sc Geography with Physics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci and Geog 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci and Geog 4"
+            }
+          },
+          {
+            "name": "B Sc Geography with Statistics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci and Geog 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci and Geog 4"
+            }
+          },
+          {
+            "name": "B Sc Geography with Zoology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths 4 and Phys Sci 3 and Geog 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths 4 and Phys Sci 3 and Geog 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Human Movement Science with Physics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl HL/FAL 4 and Maths 5 and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl HL/FAL 4 and Maths 5 and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Human Movement Science with Zoology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Hydrology with Microbiology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Hydrology with Physics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Hydrology with Statistics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Hydrology with Zoology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Mathematics with Physics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Mathematics with Statistics as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl 4 and Maths 5 and Phys Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Microbiology with Human Movement Science as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl and Maths and Phys Sci 4 and Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc Microbiology with Zoology as Major 2",
+            "duration": 3,
+            "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4",
+            "admission_requirements": {
+              "minimum_aps": 28,
+              "description": "NSC Deg with Engl AND Maths 4 AND Phys Sci 3 AND Life Sci OR Agric Sci 4"
+            }
+          },
+          {
+            "name": "B Sc4 Foundation",
+            "duration": 4,
+            "description": "NSC Deg with Engl 3 and Maths 3 and Phys Sci 2 and Agric Sci OR Life Sci 3",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Deg with Engl 3 and Maths 3 and Phys Sci 2 and Agric Sci OR Life Sci 3"
+            }
+          },
+          {
+            "name": "Dip Hospitality Management",
+            "duration": 3,
+            "description": "NSC Dip with Engl 4 and four 20 credit subjects (excl lang)",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Dip with Engl 4 and four 20 credit subjects (excl lang)"
+            }
+          },
+          {
+            "name": "Dip Sport & Exercise Technology",
+            "duration": 3,
+            "description": "NSC Dip with Engl HL 4/FAL 3 and three subjects from the designated list",
+            "admission_requirements": {
+              "minimum_aps": 26,
+              "description": "NSC Dip with Engl HL 4/FAL 3 and three subjects from the designated list"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
