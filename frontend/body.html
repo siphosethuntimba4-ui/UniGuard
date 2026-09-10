@@ -13,24 +13,41 @@
             font-family: Arial, sans-serif;
         }
 
-        body {
-            min-height: 100vh;
-            background: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+       body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background: #078bf5;
+}
 
-        .app {
-            width: 100%;
-            max-width: 570px;
-            min-height: 650px;
-            background: #078bf5;
-            position: relative;
-            overflow: hidden;
-            padding: 18px;
-        }
+        
+.app {
+    width: 100%;
+    min-height: 100vh;
+    background: #078bf5;
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+    isolation: isolate;
+}
 
+.app::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/static/unizulu-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.app > * {
+    position: relative;
+    z-index: 1;
+}
         /* Profile */
         .profile {
             position: absolute;
@@ -307,11 +324,6 @@
     <!-- Main UniGuide screen -->
     <div class="profile">LS</div>
 
-    <button class="menu" onclick="openChat()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
 
     <div class="bubble sawubona">Sawubona</div>
     <div class="bubble ndaa">Ndaa</div>
@@ -368,8 +380,10 @@
 </div>
 
 
-```html
+
 <script>
+
+let conversationHistory = [];
 
 function sendMessage() {
 
@@ -387,7 +401,6 @@ function sendMessage() {
     chatSend();
 }
 
-
 async function chatSend() {
 
     const input = document.getElementById("chatMessage");
@@ -396,6 +409,7 @@ async function chatSend() {
     const text = input.value.trim();
 
     if (text === "") return;
+
 
     // Display user's message
     const userMessage = document.createElement("div");
@@ -407,19 +421,21 @@ async function chatSend() {
 
     input.value = "";
 
+
     // Show loading message
     const botMessage = document.createElement("div");
 
     botMessage.className = "message bot-message";
-    botMessage.textContent = "UniGuide is thinking... 🤖";
+    botMessage.textContent = "UniGuide is thinking...";
 
     messages.appendChild(botMessage);
 
     messages.scrollTop = messages.scrollHeight;
 
+
     try {
 
-        // Send message to Flask
+        // Send current message AND previous conversation
         const response = await fetch("/chat", {
 
             method: "POST",
@@ -429,38 +445,71 @@ async function chatSend() {
             },
 
             body: JSON.stringify({
-                message: text
+
+                message: text,
+
+                history: conversationHistory
+
             })
 
         });
 
+
         // Get Flask response
         const data = await response.json();
 
-        // Display AI response
+
+        // Get AI response
+        let reply = "";
+
         if (data.response) {
 
-            botMessage.textContent = data.response;
+            reply = data.response;
 
         } else if (data.reply) {
 
-            botMessage.textContent = data.reply;
+            reply = data.reply;
 
         } else {
 
-            botMessage.textContent =
-                "Sorry, I could not understand the response from the AI.";
+            reply =
+                "Sorry, I could not understand the response.";
 
         }
+
+
+        // Display AI response
+        botMessage.textContent = reply;
+
+
+        // Save this conversation
+        conversationHistory.push({
+
+            role: "user",
+
+            content: text
+
+        });
+
+
+        conversationHistory.push({
+
+            role: "assistant",
+
+            content: reply
+
+        });
+
 
     } catch (error) {
 
         console.error("Chat error:", error);
 
         botMessage.textContent =
-            "❌ Sorry, I could not connect to UniGuard's AI server.";
+            "❌ Sorry, I could not connect to UniGuide's server.";
 
     }
+
 
     messages.scrollTop = messages.scrollHeight;
 

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>UniGuide - Create Account</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: #078bf5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .register-container {
+        width: 100%;
+        max-width: 450px;
+        background: white;
+        border-radius: 18px;
+        padding: 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        color: #078bf5;
+        font-size: 28px;
+        margin-bottom: 7px;
+    }
+
+    .subtitle {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .input-group {
+        margin-bottom: 16px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 9px;
+        font-size: 15px;
+        outline: none;
+        background: white;
+    }
+
+    input:focus,
+    select:focus {
+        border-color: #078bf5;
+    }
+
+    .password-help {
+        font-size: 12px;
+        color: #777;
+        margin-top: 5px;
+    }
+
+    .register-button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 9px;
+        background: #078bf5;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    .register-button:hover {
+        background: #0577d5;
+    }
+
+    .register-button:disabled {
+        background: #8fcaf7;
+        cursor: not-allowed;
+    }
+
+    .message {
+        display: none;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .error {
+        display: block;
+        background: #ffe5e5;
+        color: #c62828;
+    }
+
+    .success {
+        display: block;
+        background: #e4f7e8;
+        color: #218838;
+    }
+
+    .login-link {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .login-link a {
+        color: #078bf5;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #999;
+        font-size: 12px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="register-container">
+
+    <div class="header">
+
+        <img
+            src="/static/unizulu-logo.png"
+            alt="University of Zululand Logo"
+            class="logo"
+        >
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Create your UniGuide student account
+        </p>
+
+    </div>
+
+    <form id="registerForm">
+
+        <div class="input-group">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Create a username"
+                required
+                minlength="3"
+            >
+
+        </div>
+
+        <div class="input-group">
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                required
+                minlength="6"
+            >
+
+            <p class="password-help">
+                Password must contain at least 6 characters.
+            </p>
+
+        </div>
+
+        <div class="input-group">
+
+            <label for="confirmPassword">
+                Confirm Password
+            </label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Enter your password again"
+                required
+            >
+
+        </div>
+
+        <div class="input-group">
+
+            <label for="recoveryQuestion">
+                Password Recovery Question
+            </label>
+
+            <select id="recoveryQuestion" required>
+
+                <option value="">
+                    Select a question
+                </option>
+
+                <option value="What was the name of your first school?">
+                    What was the name of your first school?
+                </option>
+
+                <option value="What is your favourite subject?">
+                    What is your favourite subject?
+                </option>
+
+                <option value="What is your favourite hobby?">
+                    What is your favourite hobby?
+                </option>
+
+                <option value="What is your favourite sport?">
+                    What is your favourite sport?
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="input-group">
+
+            <label for="recoveryAnswer">
+                Recovery Answer
+            </label>
+
+            <input
+                type="text"
+                id="recoveryAnswer"
+                placeholder="Enter your answer"
+                required
+            >
+
+        </div>
+
+        <button
+            type="submit"
+            class="register-button"
+            id="registerButton"
+        >
+            Create Account
+        </button>
+
+    </form>
+
+    <div id="message" class="message"></div>
+
+    <div class="login-link">
+        Already have an account?
+        <a href="/login">
+            Login
+        </a>
+    </div>
+
+    <div class="footer">
+        UniGuide • University of Zululand
+    </div>
+
+</div>
+
+<script>
+
+    const registerForm =
+        document.getElementById("registerForm");
+
+    const registerButton =
+        document.getElementById("registerButton");
+
+    const message =
+        document.getElementById("message");
+
+
+    registerForm.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+        const username =
+            document.getElementById("username").value.trim();
+
+        const password =
+            document.getElementById("password").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        const recoveryQuestion =
+            document.getElementById("recoveryQuestion").value;
+
+        const recoveryAnswer =
+            document.getElementById("recoveryAnswer").value.trim();
+
+
+        message.className = "message";
+        message.textContent = "";
+
+
+        if (password !== confirmPassword) {
+
+            message.className = "message error";
+
+            message.textContent =
+                "The passwords do not match.";
+
+            return;
+        }
+
+
+        registerButton.disabled = true;
+        registerButton.textContent = "Creating account...";
+
+
+        try {
+
+            const response = await fetch("/register", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+
+                    username: username,
+
+                    password: password,
+
+                    recovery_question:
+                        recoveryQuestion,
+
+                    recovery_answer:
+                        recoveryAnswer
+
+                })
+
+            });
+
+
+            const data = await response.json();
+
+
+            if (response.ok && data.success) {
+
+                message.className =
+                    "message success";
+
+                message.textContent =
+                    "Account created successfully! Opening UniGuide...";
+
+
+                setTimeout(function() {
+
+                    window.location.href = "/";
+
+                }, 1000);
+
+
+            } else {
+
+                message.className =
+                    "message error";
+
+                message.textContent =
+                    data.message ||
+                    "Could not create your account.";
+
+                registerButton.disabled = false;
+
+                registerButton.textContent =
+                    "Create Account";
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "Registration error:",
+                error
+            );
+
+            message.className =
+                "message error";
+
+            message.textContent =
+                "Could not connect to UniGuide. Please try again.";
+
+            registerButton.disabled = false;
+
+            registerButton.textContent =
+                "Create Account";
+        }
+
+    });
+
+</script>
+
+
+</body>
+</html>

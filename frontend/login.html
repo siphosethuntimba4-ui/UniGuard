@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>UniGuide - Login</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: #078bf5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 420px;
+        background: white;
+        border-radius: 18px;
+        padding: 35px 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        color: #078bf5;
+        margin-bottom: 8px;
+        font-size: 30px;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    .input-group {
+        text-align: left;
+        margin-bottom: 18px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 13px;
+        border: 1px solid #ccc;
+        border-radius: 9px;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .input-group input:focus {
+        border-color: #078bf5;
+    }
+
+    .login-button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 9px;
+        background: #078bf5;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    .login-button:hover {
+        background: #0577d5;
+    }
+
+    .login-button:disabled {
+        background: #8fcaf7;
+        cursor: not-allowed;
+    }
+
+    .message {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        display: none;
+        font-size: 14px;
+    }
+
+    .error {
+        display: block;
+        background: #ffe5e5;
+        color: #c62828;
+    }
+
+    .success {
+        display: block;
+        background: #e4f7e8;
+        color: #218838;
+    }
+
+    .links {
+        margin-top: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links a {
+        color: #078bf5;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+
+    .register-text {
+        margin-top: 20px;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .register-text a {
+        color: #078bf5;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .register-text a:hover {
+        text-decoration: underline;
+    }
+
+    .footer {
+        margin-top: 25px;
+        color: #999;
+        font-size: 12px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="login-container">
+
+    <!-- UNIZULU LOGO -->
+    <img
+        src="/static/unizulu-logo.png"
+        alt="University of Zululand Logo"
+        class="logo"
+    >
+
+    <h1>UniGuide</h1>
+
+    <p class="subtitle">
+        University of Zululand Student Guidance
+    </p>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm">
+
+        <div class="input-group">
+            <label for="username">Username</label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+        </div>
+
+        <button
+            type="submit"
+            class="login-button"
+            id="loginButton"
+        >
+            Login
+        </button>
+
+    </form>
+
+    <!-- MESSAGE -->
+    <div id="message" class="message"></div>
+
+    <!-- LINKS -->
+    <div class="links">
+        <a href="/forgot-password">
+            Forgot your password?
+        </a>
+    </div>
+
+    <p class="register-text">
+        Don't have an account?
+        <a href="/register">
+            Create an account
+        </a>
+    </p>
+
+    <div class="footer">
+        UniGuide • UNIZULU
+    </div>
+
+</div>
+
+<script>
+
+    const loginForm = document.getElementById("loginForm");
+    const loginButton = document.getElementById("loginButton");
+    const message = document.getElementById("message");
+
+    loginForm.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+        const username =
+            document.getElementById("username").value.trim();
+
+        const password =
+            document.getElementById("password").value;
+
+        message.className = "message";
+        message.textContent = "";
+
+        loginButton.disabled = true;
+        loginButton.textContent = "Logging in...";
+
+        try {
+
+            const response = await fetch("/login", {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+
+                message.className = "message success";
+                message.textContent =
+                    "Login successful. Opening UniGuide...";
+
+                /*
+                 * We will create the dashboard route next.
+                 */
+                setTimeout(function() {
+                    window.location.href = "/dashboard";
+                }, 700);
+
+            } else {
+
+                message.className = "message error";
+                message.textContent =
+                    data.message || "Invalid username or password.";
+
+                loginButton.disabled = false;
+                loginButton.textContent = "Login";
+            }
+
+        } catch (error) {
+
+            console.error("Login error:", error);
+
+            message.className = "message error";
+            message.textContent =
+                "Could not connect to UniGuide. Please try again.";
+
+            loginButton.disabled = false;
+            loginButton.textContent = "Login";
+        }
+
+    });
+
+</script>
+```
+
+</body>
+</html>

@@ -944,3 +944,418 @@ def qualification_meets_requirements(
         "subject_requirements":
             subject_results
     }
+# ============================================================
+# CREATE STUDENT AND CHAT TABLES
+# ============================================================
+
+def create_user_tables():
+
+    connection = get_connection()
+
+    try:
+        cursor = connection.cursor()
+
+        # Students
+        cursor.execute("""
+    CREATE TABLE IF NOT EXISTS students (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT UNIQUE NOT NULL,
+        password_hash TEXT NOT NULL,
+        recovery_question TEXT NOT NULL,
+        recovery_answer_hash TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+""")
+
+        # Conversations
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS conversations (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                student_id INTEGER NOT NULL,
+                title TEXT NOT NULL DEFAULT 'New Conversation',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (student_id)
+                    REFERENCES students(id)
+                    ON DELETE CASCADE
+            )
+        """)
+
+        # Messages
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS messages (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                conversation_id INTEGER NOT NULL,
+                role TEXT NOT NULL,
+                message TEXT NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (conversation_id)
+                    REFERENCES conversations(id)
+                    ON DELETE CASCADE
+            )
+        """)
+
+        connection.commit()
+
+    finally:
+        connection.close()
+
+
+# ============================================================
+# CREATE STUDENT
+# ============================================================
+
+def create_student(username, password_hash):
+
+    connection = get_connection()
+
+    try:
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            INSERT INTO students (
+                username,
+                password_hash
+            )
+            VALUES (?, ?)
+        """, (
+            username,
+            password_hash
+        ))
+
+        connection.commit()
+
+        return cursor.lastrowid
+
+    except sqlite3.IntegrityError:
+
+        return None
+
+    finally:
+        connection.close()
+
+
+# ============================================================
+# FIND STUDENT BY USERNAME
+# ============================================================
+
+def get_student_by_username(username):
+
+    connection = get_connection()
+
+    try:
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            SELECT
+                id,
+                username,
+                password_hash,
+                created_at
+            FROM students
+            WHERE username = ?
+        """, (username,))
+
+        row = cursor.fetchone()
+
+        if row:
+            return dict(row)
+
+        return None
+
+    finally:
+        connection.close()
+
+
+# ============================================================
+# CREATE CONVERSATION
+# ============================================================
+
+def create_conversation(student_id, title="New Conversation"):
+
+    connection = get_connection()
+
+    try:
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            INSERT INTO conversations (
+                student_id,
+                title
+            )
+            VALUES (?, ?)
+        """, (
+            student_id,
+            title
+        ))
+
+        connection.commit()
+
+        return cursor.lastrowid
+
+    finally:
+        connection.close()
+
+
+# ============================================================
+# GET STUDENT CONVERSATIONS
+# ============================================================
+
+def get_student_conversations(student_id):
+
+    connection = get_connection()
+
+    try:
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            SELECT
+                id,
+                title,
+                created_at,
+                updated_at
+            FROM conversations
+            WHERE student_id = ?
+            ORDER BY updated_at DESC
+        """, (student_id,))
+
+        return [
+            dict(row)
+            for row in cursor.fetchall()
+        ]
+
+    finally:
+        connection.close()
+
+# ============================================================
+# GET ONE STUDENT CONVERSATION
+# ============================================================
+
+def get_student_conversation(
+    conversation_id,
+    student_id
+):
+
+    connection = get_connection()
+
+    try:
+
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            SELECT
+                id,
+                student_id,
+                title,
+                created_at,
+                updated_at
+
+            FROM conversations
+
+            WHERE id = ?
+
+            AND student_id = ?
+        """, (
+            conversation_id,
+            student_id
+        ))
+
+        row = cursor.fetchone()
+
+        if row:
+            return dict(row)
+
+        return None
+
+    finally:
+
+        connection.close()
+
+
+# ============================================================
+# SAVE CHAT MESSAGE
+# ============================================================
+
+def save_message(
+    conversation_id,
+    role,
+    message
+):
+
+    connection = get_connection()
+
+    try:
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            INSERT INTO messages (
+                conversation_id,
+                role,
+                message
+            )
+            VALUES (?, ?, ?)
+        """, (
+            conversation_id,
+            role,
+            message
+        ))
+
+        cursor.execute("""
+            UPDATE conversations
+            SET updated_at = CURRENT_TIMESTAMP
+            WHERE id = ?
+        """, (
+            conversation_id,
+        ))
+
+        connection.commit()
+
+    finally:
+        connection.close()
+
+
+# ============================================================
+# GET CONVERSATION MESSAGES
+# ============================================================
+
+def get_conversation_messages(
+    conversation_id,
+    student_id
+):
+
+    connection = get_connection()
+
+    try:
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            SELECT
+                m.id,
+                m.role,
+                m.message,
+                m.created_at
+            FROM messages m
+
+            JOIN conversations c
+                ON m.conversation_id = c.id
+
+            WHERE m.conversation_id = ?
+            AND c.student_id = ?
+
+            ORDER BY m.id ASC
+        """, (
+            conversation_id,
+            student_id
+        ))
+
+        return [
+            dict(row)
+            for row in cursor.fetchall()
+        ]
+
+    finally:
+        connection.close()
+
+# ============================================================
+# UPDATE STUDENT PASSWORD
+# ============================================================
+
+def update_student_password(
+    student_id,
+    password_hash
+):
+
+    connection = get_connection()
+
+    try:
+
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            UPDATE students
+            SET password_hash = ?
+            WHERE id = ?
+        """, (
+            password_hash,
+            student_id
+        ))
+
+        connection.commit()
+
+        return cursor.rowcount > 0
+
+    finally:
+
+        connection.close()
+
+# ============================================================
+# UPDATE CONVERSATION TITLE
+# ============================================================
+
+def update_conversation_title(
+    conversation_id,
+    student_id,
+    title
+):
+
+    connection = get_connection()
+
+    try:
+
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            UPDATE conversations
+
+            SET title = ?
+
+            WHERE id = ?
+
+            AND student_id = ?
+        """, (
+            title,
+            conversation_id,
+            student_id
+        ))
+
+        connection.commit()
+
+        return cursor.rowcount > 0
+
+    finally:
+
+        connection.close()
+
+# ============================================================
+# DELETE CONVERSATION
+# ============================================================
+
+def delete_conversation(
+    conversation_id,
+    student_id
+):
+
+    connection = get_connection()
+
+    try:
+
+        cursor = connection.cursor()
+
+        cursor.execute("""
+            DELETE FROM conversations
+
+            WHERE id = ?
+
+            AND student_id = ?
+        """, (
+            conversation_id,
+            student_id
+        ))
+
+        connection.commit()
+
+        return cursor.rowcount > 0
+
+    finally:
+
+        connection.close()
